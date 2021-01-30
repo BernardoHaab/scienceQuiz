@@ -1,5 +1,6 @@
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import db from "../db";
+import Metatags from "../src/components/Metatags";
 
 const GlobalStyle = createGlobalStyle`
     * {
@@ -28,10 +29,11 @@ const theme = db.theme;
 export default function App({ Component, pageProps }) {
   return (
     <>
-      <ThemeProvider theme={theme}>
-        <GlobalStyle />
-        <Component {...pageProps} />
-      </ThemeProvider>
+        <Metatags/>
+        <ThemeProvider theme={theme}>
+            <GlobalStyle />
+            <Component {...pageProps} />
+        </ThemeProvider>
     </>
   );
 }

@@ -1,16 +1,17 @@
-import styled from "styled-components";
 import db from "../db";
-
 import Widget from "../src/components/Widget";
 import Footer from "../src/components/Footer";
 import GitHubCorner from "../src/components/GitHubCorner";
 import QuizContainer from "../src/components/QuizContainer";
 import QuizBackground from "../src/components/QuizBackground";
+import Logo from "../src/components/Logo";
+
 
 export default function Home() {
     return (
-        <QuizBackground backgroundImage={db.bg}>
+        <QuizBackground backgroundImage={db.bg} mobileBackgroundImage={db.bgMobile}>
             <QuizContainer>
+                <Logo />
                 <Widget>
                     <Widget.Header>
                         <h1>O quiz da Ciência</h1>
@@ -29,7 +30,7 @@ export default function Home() {
                 </Widget>
                 <Footer/>
             </QuizContainer>
-            <GitHubCorner/>
+            <GitHubCorner projectUrl={'https://github.com/BernardoHaab/scienceQuiz'}/>
         </QuizBackground>
     );
 }
