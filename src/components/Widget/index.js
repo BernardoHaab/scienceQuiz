@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const Widget = styled.div`
     margin-top: 24px;
@@ -7,7 +7,7 @@ const Widget = styled.div`
     overflow: hidden;
     border-radius: 4px;
     border: 1px solid ${({ theme }) => theme.colors.primary};
-    background-color: ${({ theme }) =>  theme.colors.mainBg};
+    background-color: ${({ theme }) => theme.colors.mainBg};
 
     h1, h2, h3 {
         font-size: 16px;

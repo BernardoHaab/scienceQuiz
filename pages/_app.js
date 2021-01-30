@@ -1,6 +1,7 @@
-import { createGlobalStyle, ThemeProvider } from "styled-components";
-import db from "../db";
-import Metatags from "../src/components/Metatags";
+import React from 'react';
+import { createGlobalStyle, ThemeProvider } from 'styled-components';
+import db from '../db.json';
+import Metatags from '../src/components/Metatags';
 
 const GlobalStyle = createGlobalStyle`
     * {
@@ -24,16 +25,16 @@ const GlobalStyle = createGlobalStyle`
     }
 `;
 
-const theme = db.theme;
+const { theme } = db;
 
 export default function App({ Component, pageProps }) {
-  return (
-    <>
-        <Metatags/>
-        <ThemeProvider theme={theme}>
-            <GlobalStyle />
-            <Component {...pageProps} />
-        </ThemeProvider>
-    </>
-  );
+    return (
+        <>
+            <Metatags />
+            <ThemeProvider theme={theme}>
+                <GlobalStyle />
+                <Component {...pageProps} />
+            </ThemeProvider>
+        </>
+    );
 }

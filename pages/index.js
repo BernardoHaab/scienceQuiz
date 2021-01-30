@@ -1,11 +1,11 @@
-import db from "../db";
-import Widget from "../src/components/Widget";
-import Footer from "../src/components/Footer";
-import GitHubCorner from "../src/components/GitHubCorner";
-import QuizContainer from "../src/components/QuizContainer";
-import QuizBackground from "../src/components/QuizBackground";
-import Logo from "../src/components/Logo";
-
+import React from 'react';
+import db from '../db.json';
+import Widget from '../src/components/Widget';
+import Footer from '../src/components/Footer';
+import GitHubCorner from '../src/components/GitHubCorner';
+import QuizContainer from '../src/components/QuizContainer';
+import QuizBackground from '../src/components/QuizBackground';
+import Logo from '../src/components/Logo';
 
 export default function Home() {
     return (
@@ -28,9 +28,9 @@ export default function Home() {
                         <p>Lorem ipsum dolor sit amet, consectetur adip</p>
                     </Widget.Content>
                 </Widget>
-                <Footer/>
+                <Footer />
             </QuizContainer>
-            <GitHubCorner projectUrl={'https://github.com/BernardoHaab/scienceQuiz'}/>
+            <GitHubCorner projectUrl="https://github.com/BernardoHaab/scienceQuiz" />
         </QuizBackground>
     );
 }
