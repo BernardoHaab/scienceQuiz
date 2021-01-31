@@ -5,27 +5,102 @@
     "description": "Descrição do quiz.",
     "questions": [
         {
-            "image": "https://media.giphy.com/media/j5P0DQIOf4PonLi55G/giphy.gif",
-            "title": "Qual a diferença entre = , == e === ?",
-            "description": "Pergunta fácil em!",
-            "answer": 1,
+            "image": "https://i.pinimg.com/564x/af/01/24/af01244b27ff4b7f4bb08c8c47101c8f.jpg",
+            "title": "Qual a ídeia por traz da frase \"O Sol é como o Fogo, a Lua é como a Água\"?",
+            "description": "Zhang Heng de 120d.C.",
+            "answer": 2,
             "alternatives": [
-                "São a mesma coisa",
-                "O = significa atribuição de valor. Já == verifica a igualdade do valor, enquanto === verifica valor e tipo de variável."
+                "Que o Sol é feito de fogo e a Lua de água.",
+                "Que caso a Lua se aproxima-se do Sol poderia apagar o seu fogo",
+                "Que o Sol possuí luz própria e a Lua reflete a luz.",
+                "Que o calor da terra vem do Sol e a chuva vem da Lua."
             ]
         },
         {
-            "image": "https://media.giphy.com/media/j5P0DQIOf4PonLi55G/giphy.gif",
-            "title": "Qual a diferença entre = , == e === ?",
-            "description": "Pergunta fácil em!",
+            "image": "https://i.pinimg.com/564x/d4/05/99/d40599bf548eeed7abef02ca9f749e6c.jpg",
+            "title": "Quem foi a primeira pessoa a afirmar que as órbitas dos planetas são elípticas?",
+            "description": "",
             "answer": 0,
             "alternatives": [
-                "São a mesma coisa",
-                "O = significa atribuição de valor. Já == verifica a igualdade do valor, enquanto === verifica valor e tipo de variável."
+                "Johannes Kepler",
+                "Nicolau Copérnico",
+                "Isaac Newton",
+                "Edwin Hubble"
+            ]
+        },
+        {
+            "image": "https://i.pinimg.com/564x/fd/3d/fd/fd3dfdd44b767b30aa0b8dedd0187b04.jpg",
+            "title": "A radiação é uma propriedade...",
+            "description": "Já dizia Marie Curie",
+            "answer": 3,
+            "alternatives": [
+                "Que pode te dar super poderes",
+                "Só pode ser emitida artificialmente",
+                "Da reação entre elementos",
+                "Atômica dos elementos"
+            ]
+        },
+        {
+            "image": "https://i.pinimg.com/564x/d6/69/48/d66948c5a333065172d4fabeec87f75f.jpg",
+            "title": "Qual o material que Leo Baekeland inventou, e extremamente importante para a humanidade?",
+            "description": "Ele criou isso \"sem querer\"",
+            "answer": 0,
+            "alternatives": [
+                "O plástico",
+                "Laicra",
+                "Alcool isopropilico",
+                "Silício"
+            ]
+        },
+        {
+            "image": "https://i.pinimg.com/564x/0e/0d/0e/0e0d0ee44f4494abf0d40c9d50048efc.jpg",
+            "title": "Quando Mendeleev criou sua tabela periódica deixou lácunas de elementos com base em que?",
+            "description": "Ele criou isso \"sem querer\"",
+            "answer": 1,
+            "alternatives": [
+                "Na ordem alfabética",
+                "Uma periodicidade das proprieades dos elementos, organizados pelo seu peso atômico",
+                "Nas ligações quimicas realizadas entre diversos elemntos já conhecidos"
+            ]
+        },
+        {
+            "image": "https://i.pinimg.com/564x/5d/b2/fe/5db2fee8eb4fae4fc5ee6ece930df0a6.jpg",
+            "title": "Qual a evidência que Louis Agassiz usou para apresentar a teoria da glaciação global?",
+            "description": "",
+            "answer": 2,
+            "alternatives": [
+                "A presença de gelo em diversos pontos do mundo.",
+                "O crescente aquecimento da terra, indicando que um dia ela foi congelada",
+                "Características de geleiras encontradas em locais sem a sua presença"
+            ]
+        },
+        {
+            "image": "https://i.pinimg.com/564x/d4/b6/6c/d4b66c0fb04546106aee671f332452d6.jpg",
+            "title": "Quem foi que apresentou pela primeira o elo evolutivo entre pássaros e dinossauros?",
+            "description": "\"Os pássaros são essencialmente semelhantes aos répteis\"",
+            "answer": 1,
+            "alternatives": [
+                "Charles Darwin",
+                "Thomas Henry Huxley",
+                "Gregor Mendel",
+                "Robert Fitzroy"
+            ]
+        },
+        {
+            "image": "https://i.pinimg.com/564x/46/03/7d/46037dc9ad378fb95d473259ae9f39d1.jpg",
+            "title": "Segundo John Dalton as tabelas de elementos deveriam ser baseadas em que?",
+            "description": "",
+            "answer": 3,
+            "alternatives": [
+                "No formato dos elementos",
+                "Na quantidade de reações que o elemento pode fazer",
+                "No valor da meia-vida dos elementos",
+                "No peso das particulas finais"
             ]
         }
     ],
     "external": [
+        "meta-quiz-imersao-react.markkop.vercel.app",
         "https://aluraquizpokemon.cesarrobertopg.vercel.app",
         "https://aluraquiz-base.alura-challenges.vercel.app",
         "https://aluraquiz.alnun.vercel.app"
