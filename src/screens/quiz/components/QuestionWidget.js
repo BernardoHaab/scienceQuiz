@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { motion } from 'framer-motion';
+
 import Widget from '../../../components/Widget';
 import Button from '../../../components/Button';
 import AlternativesForm from '../../../components/AlternativesForm';
@@ -72,7 +74,9 @@ function QuestionWidget({
                         return (
                             <Widget.Topic
                                 key={alternativeId}
-                                as="label"
+                                as={motion.label}
+                                whileHover={{ scale: 1.1 }}
+                                whileTap={{ scale: 0.9 }}
                                 htmlFor={alternativeId}
                                 data-selected={isSelected}
                                 data-status={isSubmitted && selectedAlternativeStatus}

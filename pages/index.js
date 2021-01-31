@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { useRouter } from 'next/router';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
+import { useRouter } from 'next/router';
 
 import db from '../db.json';
 import Widget from '../src/components/Widget';
@@ -35,7 +36,19 @@ export default function Home() {
         <QuizBackground backgroundImage={db.bg} mobileBackgroundImage={db.bgMobile}>
             <QuizContainer>
                 <Logo />
-                <Widget>
+                <Widget
+                    as={motion.section}
+                    transition={{ duration: 0.3 }}
+                    variants={{
+                        hidden: { opacity: 0, scale: 0 },
+                        show: {
+                            opacity: 1,
+                            scale: 1,
+                        },
+                    }}
+                    initial="hidden"
+                    animate="show"
+                >
                     <Widget.Header>
                         <h1>O Quiz da Ciência</h1>
                     </Widget.Header>
@@ -55,7 +68,19 @@ export default function Home() {
                         </form>
                     </Widget.Content>
                 </Widget>
-                <Widget>
+                <Widget
+                    as={motion.section}
+                    transition={{ delay: 0.1, duration: 0.3 }}
+                    variants={{
+                        hidden: { opacity: 0, scale: 0 },
+                        show: {
+                            opacity: 1,
+                            scale: 1,
+                        },
+                    }}
+                    initial="hidden"
+                    animate="show"
+                >
                     <Widget.Content>
                         <h1>Quizes da galera</h1>
 
@@ -68,20 +93,32 @@ export default function Home() {
                                     .split('.');
 
                                 return (
-                                    <li key={externalLink}>
+                                    <motion.li
+                                        whileHover={{ scale: 1.1 }}
+                                        whileTap={{ scale: 0.9 }}
+                                        key={externalLink}
+                                    >
                                         <Widget.Topic
                                             as={Link}
                                             href={`/quiz/${projectName}___${githubUser}`}
                                         >
                                             {`${projectName}/${githubUser}`}
                                         </Widget.Topic>
-                                    </li>
+                                    </motion.li>
                                 );
                             })}
                         </ul>
                     </Widget.Content>
                 </Widget>
-                <Footer />
+                <Footer
+                    as={motion.footer}
+                    variant={{
+                        hidden: { opacity: 0 },
+                        show: { opacity: 1 },
+                    }}
+                    initial="hidden"
+                    animate="show"
+                />
             </QuizContainer>
             <GitHubCorner projectUrl="https://github.com/BernardoHaab/scienceQuiz" />
         </QuizBackground>
