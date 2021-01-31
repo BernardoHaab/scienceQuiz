@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Widget from '../../src/components/Widget';
+import Widget from '../../../components/Widget';
 
 function ResultWidget({ playerName, results }) {
     return (

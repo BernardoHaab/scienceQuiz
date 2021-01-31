@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Widget from '../../src/components/Widget';
+import Widget from '../../../components/Widget';
 
 export default function LoadingWidget() {
     return (

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import Widget from '../../src/components/Widget';
-import Button from '../../src/components/Button';
-import AlternativesForm from '../../src/components/AlternativesForm';
+import Widget from '../../../components/Widget';
+import Button from '../../../components/Button';
+import AlternativesForm from '../../../components/AlternativesForm';
 
 function QuestionWidget({
     question,

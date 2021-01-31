@@ -5,9 +5,9 @@ import db from '../../db.json';
 import QuizContainer from '../../src/components/QuizContainer';
 import QuizBackground from '../../src/components/QuizBackground';
 import Logo from '../../src/components/Logo';
-import QuestionWidget from './QuestionWidget';
-import LoadingWidget from './LoadingWidget';
-import ResultWidget from './ResultWidget';
+import QuestionWidget from '../../src/screens/quiz/components/QuestionWidget';
+import LoadingWidget from '../../src/screens/quiz/components/LoadingWidget';
+import ResultWidget from '../../src/screens/quiz/components/ResultWidget';
 
 const screenStates = {
     QUIZ: 'QUIZ',
