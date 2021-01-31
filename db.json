@@ -1,5 +1,5 @@
 {
-    "bg": "images/background.jpg",
+    "bg": "https://i.imgur.com/H4Xz3A7.jpg",
     "bgMobile": "images/backgroundMobile.jpg",
     "title": "Quiz dos desenhos",
     "description": "Descrição do quiz.",
@@ -26,7 +26,9 @@
         }
     ],
     "external": [
-        "https://github.com/"
+        "https://aluraquizpokemon.cesarrobertopg.vercel.app",
+        "https://aluraquiz-base.alura-challenges.vercel.app",
+        "https://aluraquiz.alnun.vercel.app"
     ],
     "theme": {
         "colors": {

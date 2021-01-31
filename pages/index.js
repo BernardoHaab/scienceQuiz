@@ -11,6 +11,7 @@ import QuizBackground from '../src/components/QuizBackground';
 import Logo from '../src/components/Logo';
 import Input from '../src/components/Input';
 import Button from '../src/components/Button';
+import Link from '../src/components/Link';
 
 const Playbutton = styled.div`
     *:first-child {
@@ -58,7 +59,26 @@ export default function Home() {
                     <Widget.Content>
                         <h1>Quizes da galera</h1>
 
-                        <p>Lorem ipsum dolor sit amet, consectetur adip</p>
+                        <ul>
+                            {db.external.map((externalLink) => {
+                                const [projectName, githubUser] = externalLink
+                                    .replace(/\//g, '')
+                                    .replace('https:', '')
+                                    .replace('.vercel.app', '')
+                                    .split('.');
+
+                                return (
+                                    <li key={externalLink}>
+                                        <Widget.Topic
+                                            as={Link}
+                                            href={`/quiz/${projectName}___${githubUser}`}
+                                        >
+                                            {`${projectName}/${githubUser}`}
+                                        </Widget.Topic>
+                                    </li>
+                                );
+                            })}
+                        </ul>
                     </Widget.Content>
                 </Widget>
                 <Footer />

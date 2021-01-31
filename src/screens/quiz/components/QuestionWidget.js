@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Widget from '../../../components/Widget';
 import Button from '../../../components/Button';
 import AlternativesForm from '../../../components/AlternativesForm';
+import BackLinkArrow from '../../../components/BackLinkArrow';
 
 function QuestionWidget({
     question,
@@ -29,6 +30,7 @@ function QuestionWidget({
     return (
         <Widget>
             <Widget.Header>
+                <BackLinkArrow href="/" />
                 <h3>
                     {`Pergunta ${currentQuestionId + 1} de ${totalQuestions}`}
                 </h3>

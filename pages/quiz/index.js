@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
+import PropTypes from 'prop-types';
 
 import db from '../../db.json';
 import QuizContainer from '../../src/components/QuizContainer';
@@ -15,12 +16,12 @@ const screenStates = {
     RESULT: 'RESULT',
 };
 
-export default function QuizPage() {
-    const totalQuestions = db.questions.length;
+function QuizPage({ dbQuestions, dbBackground }) {
+    const totalQuestions = dbQuestions.length;
     const [screenState, setScreenState] = useState(screenStates.LOADING);
     const [results, setResults] = useState([]);
     const [currentQuestionId, setCurrentQuestionId] = useState(0);
-    const question = db.questions[currentQuestionId];
+    const question = dbQuestions[currentQuestionId];
     const router = useRouter();
 
     useEffect(() => {
@@ -43,7 +44,7 @@ export default function QuizPage() {
     }
 
     return (
-        <QuizBackground backgroundImage={db.bg}>
+        <QuizBackground backgroundImage={dbBackground}>
             <QuizContainer>
                 <Logo />
                 {screenState === screenStates.QUIZ && (
@@ -64,3 +65,21 @@ export default function QuizPage() {
         </QuizBackground>
     );
 }
+
+QuizPage.defaultProps = {
+    dbQuestions: db.questions,
+    dbBackground: db.bg,
+};
+
+QuizPage.propTypes = {
+    dbQuestions: PropTypes.arrayOf(PropTypes.shape({
+        image: PropTypes.string,
+        title: PropTypes.string.isRequired,
+        description: PropTypes.string,
+        answer: PropTypes.number.isRequired,
+        alternatives: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+    })),
+    dbBackground: PropTypes.string,
+};
+
+export default QuizPage;
